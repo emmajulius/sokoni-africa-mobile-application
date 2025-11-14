@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White background only - custom splash handled in Flutter -->
+    <item>
+        <color android:color="#FFFFFF"/>
+    </item>
+</layer-list>
