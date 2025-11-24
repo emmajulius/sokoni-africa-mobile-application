@@ -34,11 +34,11 @@ Register a new user account.
 **Request Body:**
 ```json
 {
-  "username": "john_doe",
-  "full_name": "John Doe",
-  "email": "john@example.com",
+  "username": "Emma",
+  "full_name": "Emma Julius",
+  "email": "emma@example.com",
   "phone": "+255712345678",
-  "password": "SecurePass123!",
+  "password": "emma123",
   "user_type": "client",
   "gender": "male"
 }
@@ -51,9 +51,9 @@ Register a new user account.
   "token_type": "bearer",
   "user": {
     "id": 42,
-    "username": "john_doe",
-    "email": "john@example.com",
-    "full_name": "John Doe",
+    "username": "Emma",
+    "email": "emma@example.com",
+    "full_name": "Emma Julius",
     "user_type": "client"
   }
 }
@@ -64,11 +64,11 @@ Register a new user account.
 curl -X POST "http://localhost:8000/api/auth/register" \
   -H "Content-Type: application/json" \
   -d '{
-    "username": "john_doe",
-    "full_name": "John Doe",
-    "email": "john@example.com",
-    "phone": "+255712345678",
-    "password": "SecurePass123!",
+    "username": "Emma",
+  "full_name": "Emma Julius",
+  "email": "emma@example.com",
+  "phone": "+255712345678",
+  "password": "emma123",
     "user_type": "client"
   }'
 ```
@@ -84,16 +84,16 @@ Authenticate user and receive access token.
 **Request Body:**
 ```json
 {
-  "username": "john_doe",
-  "password": "SecurePass123!"
+  "username": "Emma",
+  "password": "emma123"
 }
 ```
 
 **Alternative (Email/Phone):**
 ```json
 {
-  "email": "john@example.com",
-  "password": "SecurePass123!"
+  "email": "emma@example.com",
+  "password": "emma123"
 }
 ```
 
@@ -104,8 +104,8 @@ Authenticate user and receive access token.
   "token_type": "bearer",
   "user": {
     "id": 42,
-    "username": "john_doe",
-    "email": "john@example.com",
+    "username": "Emma",
+    "email": "emma@example.com",
     "user_type": "client"
   }
 }
@@ -116,8 +116,8 @@ Authenticate user and receive access token.
 curl -X POST "http://localhost:8000/api/auth/login" \
   -H "Content-Type: application/json" \
   -d '{
-    "username": "john_doe",
-    "password": "SecurePass123!"
+    "username": "Emma",
+    "password": "emma123"
   }'
 ```
 
@@ -186,10 +186,10 @@ Complete registration after OTP verification.
 ```json
 {
   "phone": "+255712345678",
-  "username": "john_doe",
-  "full_name": "John Doe",
-  "email": "john@example.com",
-  "password": "SecurePass123!",
+  "username": "Emma",
+  "full_name": "Emma Julius",
+  "email": "emma@example.com",
+  "password": "emma123",
   "user_type": "client",
   "gender": "male"
 }
@@ -202,7 +202,7 @@ Complete registration after OTP verification.
   "token_type": "bearer",
   "user": {
     "id": 42,
-    "username": "john_doe",
+    "username": "Emma",
     "phone": "+255712345678"
   }
 }
@@ -270,7 +270,7 @@ Send password reset link via email.
 **Request Body:**
 ```json
 {
-  "email": "john@example.com"
+  "email": "emma@example.com"
 }
 ```
 
@@ -348,9 +348,9 @@ Authorization: Bearer <access_token>
 ```json
 {
   "id": 42,
-  "username": "john_doe",
-  "email": "john@example.com",
-  "full_name": "John Doe",
+  "username": "Emma",
+  "email": "emma@example.com",
+  "full_name": "Emma Julius",
   "phone": "+255712345678",
   "user_type": "client",
   "profile_image": "https://...",
@@ -377,9 +377,9 @@ Authorization: Bearer <access_token>
 ```json
 {
   "id": 42,
-  "username": "john_doe",
-  "full_name": "John Doe",
-  "email": "john@example.com",
+  "username": "Emma",
+  "full_name": "Emma Julius",
+  "email": "emma@example.com",
   "phone": "+255712345678",
   "user_type": "client",
   "gender": "male",
@@ -407,9 +407,9 @@ Authorization: Bearer <access_token>
 **Request Body:**
 ```json
 {
-  "username": "john_updated",
-  "full_name": "John Updated",
-  "email": "john.updated@example.com",
+  "username": "Emma_updated",
+  "full_name": "Emma Updated",
+  "email": "emma.updated@example.com",
   "phone": "+255712345679",
   "gender": "male",
   "profile_image": "https://...",
@@ -423,9 +423,9 @@ Authorization: Bearer <access_token>
 ```json
 {
   "id": 42,
-  "username": "john_updated",
-  "full_name": "John Updated",
-  "email": "john.updated@example.com",
+  "username": "Emma_updated",
+  "full_name": "Emma Updated",
+  "email": "emma.updated@example.com",
   "user_type": "client",
   "updated_at": "2025-11-14T12:00:00Z"
 }
@@ -443,8 +443,8 @@ Get public user profile by ID.
 ```json
 {
   "id": 42,
-  "username": "john_doe",
-  "full_name": "John Doe",
+  "username": "Emma",
+  "full_name": "Emma julius",
   "profile_image": "https://...",
   "user_type": "client",
   "created_at": "2025-11-14T10:00:00Z"
@@ -770,7 +770,7 @@ Get comments for a product.
     "id": 1,
     "product_id": 123,
     "user_id": 42,
-    "username": "john_doe",
+    "username": "Emma",
     "comment": "Great product!",
     "created_at": "2025-11-14T14:00:00Z"
   }
@@ -803,7 +803,7 @@ Authorization: Bearer <access_token>
   "id": 1,
   "product_id": 123,
   "user_id": 42,
-  "username": "john_doe",
+  "username": "Emma",
   "comment": "Great product! Highly recommended.",
   "created_at": "2025-11-14T14:00:00Z"
 }
@@ -1258,7 +1258,7 @@ Authorization: Bearer <access_token>
   "currency": "TZS",
   "payment_method": "card",
   "phone_number": "+255712345678",
-  "email": "john@example.com",
+  "email": "emma@example.com",
   "full_name": "John Doe"
 }
 ```
@@ -1315,9 +1315,9 @@ Authorization: Bearer <access_token>
   "payout_method": "bank",
   "payout_account": "1234567890",
   "currency": "TZS",
-  "full_name": "John Doe",
+  "full_name": "Emma Julius",
   "bank_name": "CRDB Bank",
-  "account_name": "John Doe"
+  "account_name": "Emma julius"
 }
 ```
 
@@ -1627,7 +1627,7 @@ Get all active stories (24-hour expiring).
   {
     "id": 1,
     "user_id": 42,
-    "username": "john_doe",
+    "username": "Emma",
     "media_url": "https://...",
     "media_type": "image",
     "views_count": 15,
@@ -1896,7 +1896,7 @@ Authorization: Bearer <access_token>
   {
     "id": 1,
     "user_id": 42,
-    "username": "john_doe",
+    "username": "Emma",
     "bid_amount": 125.00,
     "created_at": "2025-11-14T18:00:00Z"
   }
