@@ -190,14 +190,3 @@ The Sokoni Africa App is fully functional, scalable, and production-ready for An
 - [API Documentation](API_DOCUMENTATION.md)
 - [Project Report](SOKONI_AFRICA_APP_REPORT.md)
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-**Built with ❤️ for African businesses**
